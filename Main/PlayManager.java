@@ -132,7 +132,6 @@ public class PlayManager {
         int x = left_x;
         int y =top_y;
         int blockCount = 0;
-        int lineCount = 0;
         
         while(x < right_x && y < bottom_y) {
             
@@ -160,21 +159,6 @@ public class PlayManager {
                         }
                     }
                     
-                    lineCount++;
-                    lines++;
-                    // Drop Speed
-                    // If the line score hits a certain number, increase the drop speed
-                    // 1 is the fastest
-                    if(lines % 10 == 0 && dropInterval > 1) {
-                        
-                        level++;
-                        if(dropInterval > 10) {
-                            dropInterval -= 10;
-                        } else {
-                            dropInterval -= 1;
-                        }
-                    }
-                    
                     // a line has been deleted so need to slide down blocks that are above it
                     for(int i = 0; i < staticBlocks.size(); i++) {
                         // if a block is above the current y, move it down by the block size
@@ -187,12 +171,6 @@ public class PlayManager {
                 x = left_x;
                 y += Block.SIZE;
             }
-        }
-        
-        // Add Score
-        if(lineCount > 0) {
-            int singleLineScore = 10* level;
-            score += singleLineScore * lineCount;
         }
         
     }
@@ -268,36 +246,5 @@ public class PlayManager {
         g2.setColor(Color.white);
         g2.setFont(new Font ("Times New Roman", Font.BOLD, 60));
         g2.drawString("Rip Off Tetris", x, y);
-        
-        // Draw the Controls
-        x = 60;
-        y = top_y + 230;
-        g2.setColor(Color.white);
-        g2.setFont(new Font ("Arial", Font.PLAIN, 40));
-        g2.drawString("Rotate: W", x, y);
-        
-        x = 60;
-        y = top_y + 180;
-        g2.setColor(Color.white);
-        g2.setFont(new Font ("Arial", Font.PLAIN, 40));
-        g2.drawString("Move Left: A", x, y);
-        
-        x = 60;
-        y = top_y + 130;
-        g2.setColor(Color.white);
-        g2.setFont(new Font ("Arial", Font.PLAIN, 40));
-        g2.drawString("Move Right: D", x, y);
-        
-        x = 60;
-        y = top_y + 80;
-        g2.setColor(Color.white);
-        g2.setFont(new Font ("Arial", Font.PLAIN, 40));
-        g2.drawString("Speed Down: S", x, y);
-        
-        x = 60;
-        y = top_y + 30;
-        g2.setColor(Color.white);
-        g2.setFont(new Font ("Arial", Font.PLAIN, 40));
-        g2.drawString("Pause: SPACE", x, y);
     }
 }
