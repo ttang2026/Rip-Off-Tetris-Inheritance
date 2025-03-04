@@ -299,5 +299,66 @@ public class PlayManager {
         g2.setColor(Color.white);
         g2.setFont(new Font ("Arial", Font.PLAIN, 40));
         g2.drawString("Pause: SPACE", x, y);
+        
+        // Drawing the Game Overview
+        x = 35;
+        y = top_y + 410;
+        g2.setColor(Color.white);
+        g2.setFont(new Font ("Arial", Font.TYPE1_FONT, 20));
+        g2.drawString("PRESS THE PAUSE! (SPACE)", x, y);
+        
+        x = 35;
+        y = top_y + 430;
+        g2.setColor(Color.white);
+        g2.setFont(new Font ("Arial", Font.ROMAN_BASELINE, 20));
+        g2.drawString("Hello! This game is just a simple Tetris game", x, y);
+        
+        x = 35;
+        y = top_y + 450;
+        g2.setColor(Color.white);
+        g2.setFont(new Font ("Arial", Font.ROMAN_BASELINE, 20));
+        g2.drawString("where you have to put random blocks down", x, y);
+        
+        x = 35;
+        y = top_y + 470;
+        g2.setColor(Color.white);
+        g2.setFont(new Font ("Arial", Font.ROMAN_BASELINE, 20));
+        g2.drawString("and create a horizontal line to make space.", x, y);
+        
+        x = 35;
+        y = top_y + 490;
+        g2.setColor(Color.white);
+        g2.setFont(new Font ("Arial", Font.ROMAN_BASELINE, 20));
+        g2.drawString("With this goal, you must achieve the", x, y);
+        
+        x = 35;
+        y = top_y + 510;
+        g2.setColor(Color.white);
+        g2.setFont(new Font ("Arial", Font.ROMAN_BASELINE, 20));
+        g2.drawString("highest score possible (top right)", x, y);
+        
+        x = 35;
+        y = top_y + 530;
+        g2.setColor(Color.white);
+        g2.setFont(new Font ("Arial", Font.ROMAN_BASELINE, 20));
+        g2.drawString("before dying by stacking to the top!", x, y);
+        
+        x = 35;
+        y = top_y + 550;
+        g2.setColor(Color.white);
+        g2.setFont(new Font ("Arial", Font.ROMAN_BASELINE, 20));
+        g2.drawString("Once you un-pause this game, the game", x, y);
+        
+        x = 35;
+        y = top_y + 570;
+        g2.setColor(Color.white);
+        g2.setFont(new Font ("Arial", Font.ROMAN_BASELINE, 20));
+        g2.drawString("will start automatically!", x, y);
+        
+        x = 35;
+        y = top_y + 590;
+        g2.setColor(Color.white);
+        g2.setFont(new Font ("Arial", Font.ROMAN_BASELINE, 20));
+        g2.drawString("Good Luck!", x, y);
     }
 }
